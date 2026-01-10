@@ -1,0 +1,3 @@
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+.navbar-brand { font-weight: bold; letter-spacing: 1px; }
