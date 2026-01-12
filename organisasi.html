@@ -10,19 +10,24 @@
 </head>
 <body id="page-organisasi">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html"><i class="fas fa-graduation-cap"></i> SI UNIKU ALUMNI</a>
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="https://raw.githubusercontent.com/nandi2341/praktikum_webdesain/refs/heads/main/20230329_051749.png" alt="Logo" width="40" height="40" class="me-2">
+                <span>SI UNIKU ALUMNI</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="organisasi.html">Organisasi & Event</a></li>
-                    <li class="nav-item"><a class="nav-link" href="forum.html">Forum & Loker</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profil.html">Profil Saya</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="organisasi.html">Organisasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="loker.html">Bursa Kerja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="forum.html">Forum</a></li>
                     <li class="nav-item"><a class="nav-link" href="alumni.html">Direktori</a></li>
-                    <li class="nav-item"><a class="nav-link text-warning" href="#" onclick="logout()">Logout</a></li>
+                    <li class="nav-item"><a class="nav-link text-warning fw-bold" href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -35,7 +40,7 @@
             
             <ul class="nav nav-tabs mb-3" id="adminTab" role="tablist">
                 <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-event">Input Event</button></li>
-                <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-struktur">Input Pengurus</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-struktur">Kelola Pengurus</button></li>
                 <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-proker">Input Proker</button></li>
             </ul>
 
@@ -54,12 +59,18 @@
 
                 <div class="tab-pane fade" id="tab-struktur">
                     <form id="form-struktur">
+                        <input type="hidden" name="id" id="struktur-id">
+                        
                         <div class="row g-2">
-                            <div class="col-md-4"><input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required></div>
-                            <div class="col-md-4"><input type="text" name="jabatan" class="form-control" placeholder="Jabatan (Ketua, Sekretaris)" required></div>
-                            <div class="col-md-2"><input type="number" name="urutan" class="form-control" placeholder="Urutan (1,2,3)" required></div>
-                            <div class="col-md-2"><input type="text" name="foto" class="form-control" placeholder="Link Foto (Opsional)"></div>
-                            <div class="col-12"><button type="submit" class="btn btn-success w-100">Simpan Pengurus</button></div>
+                            <div class="col-md-4"><input type="text" name="nama" id="str-nama" class="form-control" placeholder="Nama Lengkap" required></div>
+                            <div class="col-md-4"><input type="text" name="jabatan" id="str-jabatan" class="form-control" placeholder="Jabatan" required></div>
+                            <div class="col-md-2"><input type="number" name="urutan" id="str-urutan" class="form-control" placeholder="Urutan (1,2,3)" required></div>
+                            <div class="col-md-2"><input type="text" name="foto" id="str-foto" class="form-control" placeholder="Link Foto"></div>
+                            
+                            <div class="col-12 d-flex gap-2">
+                                <button type="submit" id="btn-save-struktur" class="btn btn-success flex-grow-1">Simpan Pengurus</button>
+                                <button type="button" id="btn-cancel-struktur" class="btn btn-secondary" style="display:none;" onclick="resetFormStruktur()">Batal Edit</button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -118,7 +129,7 @@
     </main>
 
     <footer class="bg-dark text-white text-center py-3 mt-auto">
-        <p>&copy; 2024 Alumni SI UNIKU</p>
+        <p>&copy; 2026 Alumni SI UNIKU</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

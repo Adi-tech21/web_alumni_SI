@@ -12,119 +12,136 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top mb-4">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html"><i class="fas fa-graduation-cap"></i> SI UNIKU ALUMNI</a>
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="https://raw.githubusercontent.com/nandi2341/praktikum_webdesain/refs/heads/main/20230329_051749.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+                ALUMNI SI
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="organisasi.html">Organisasi & Event</a></li>
-                    <li class="nav-item"><a class="nav-link" href="forum.html">Forum & Loker</a></li>
-                    <li class="nav-item"><a class="nav-link" href="alumni.html">Direktori</a></li>
-                    <li class="nav-item"><a class="nav-link text-warning" href="#" onclick="logout()">Logout</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil Saya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="organisasi.html">Organisasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="loker.html">Bursa Kerja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forum.html">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="alumni.html">Direktori</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning fw-bold" href="#" onclick="logout()">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <main class="container">
-        <div class="p-4 mb-4 bg-white rounded-3 shadow-sm border-start border-5 border-primary">
-            <h2 class="fw-bold">Halo, <span id="user-name">Alumni</span>! 👋</h2>
-            <p class="text-muted mb-0">Selamat datang di Dashboard Sistem Informasi. Cek agenda terbaru dan lowongan kerja hari ini.</p>
+        
+        <div class="p-4 mb-4 bg-white rounded-3 shadow-sm border-start border-5 border-primary position-relative overflow-hidden">
+            <div class="position-relative z-1">
+                <h2 class="fw-bold mb-1">Halo, <span id="user-name">Alumni</span>! 👋</h2>
+                <p class="text-muted mb-0">
+                    Selamat datang di Dashboard Sistem Informasi.
+                </p>
+                <p class="mt-2 mb-0 fw-bold text-primary bg-light d-inline-block px-3 py-1 rounded-pill border">
+                    <i class="fas fa-id-card"></i> NIM: <span id="user-nim">...</span>
+                </p>
+            </div>
         </div>
 
         <div class="row">
             <div class="col-md-4">
-                <div class="card shadow-sm mb-4">
-                    <div class="card-header bg-white fw-bold"><i class="fas fa-compass"></i> Menu Cepat</div>
+                
+                <div class="card shadow-sm mb-4 border-0">
+                    <div class="card-header bg-white fw-bold py-3">
+                        <i class="fas fa-compass text-primary"></i> Akses Cepat
+                    </div>
                     <div class="list-group list-group-flush">
-                        <a href="organisasi.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                            <span><i class="fas fa-sitemap text-primary me-2"></i> Struktur & Proker</span>
+                        <a href="profil.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            <span><i class="fas fa-user-edit text-primary me-2"></i> Update Profil</span>
+                            <i class="fas fa-chevron-right text-muted small"></i>
+                        </a>
+                        <a href="loker.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            <span><i class="fas fa-briefcase text-success me-2"></i> Cari Kerja</span>
                             <i class="fas fa-chevron-right text-muted small"></i>
                         </a>
                         <a href="forum.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                            <span><i class="fas fa-comments text-success me-2"></i> Diskusi Umum</span>
+                            <span><i class="fas fa-comments text-warning me-2"></i> Diskusi</span>
                             <i class="fas fa-chevron-right text-muted small"></i>
                         </a>
-                        <a href="alumni.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                            <span><i class="fas fa-users text-info me-2"></i> Cari Teman</span>
+                        <a href="organisasi.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            <span><i class="fas fa-sitemap text-info me-2"></i> Pengurus</span>
                             <i class="fas fa-chevron-right text-muted small"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="card shadow-sm mb-4">
-                    <div class="card-header bg-danger text-white fw-bold"><i class="fas fa-calendar-alt"></i> Agenda Event</div>
+                <div class="card shadow-sm mb-4 border-0">
+                    <div class="card-header bg-danger text-white fw-bold py-3">
+                        <i class="fas fa-calendar-alt"></i> Agenda Terbaru
+                    </div>
                     <div class="card-body p-0">
                         <div id="home-events-container" class="list-group list-group-flush">
-                            <p class="text-center p-3 text-muted small">Memuat agenda...</p>
+                            <div class="p-4 text-center">
+                                <div class="spinner-border text-danger spinner-border-sm" role="status"></div>
+                                <p class="text-muted small mt-2 mb-0">Memuat agenda...</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-footer bg-white text-center">
-                        <a href="organisasi.html" class="small text-decoration-none">Lihat Semua Event &rarr;</a>
+                    <div class="card-footer bg-white text-center py-2">
+                        <a href="organisasi.html" class="small text-decoration-none fw-bold text-danger">
+                            Lihat Semua Event <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-8">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="fw-bold"><i class="fas fa-briefcase"></i> Lowongan Kerja Terbaru</h4>
-                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalLoker">
-                        <i class="fas fa-plus"></i> Pasang Loker
-                    </button>
+                    <h4 class="fw-bold m-0"><i class="fas fa-briefcase text-primary"></i> Info Loker Terbaru</h4>
+                    <a href="loker.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                        Lihat Semua <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
                 </div>
 
-                <div id="home-loker-container" class="row">
-                    <div class="col-12 text-center py-5">
+                <div id="home-loker-summary">
+                    <div class="text-center py-5">
                         <div class="spinner-border text-primary" role="status"></div>
                         <p class="mt-2 text-muted">Mengambil data loker...</p>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info d-flex align-items-center mt-3" role="alert">
+                    <i class="fas fa-info-circle fs-4 me-3"></i>
+                    <div>
+                        <strong>Punya info lowongan kerja?</strong>
+                        <br>Bantu teman-teman alumni dengan memposting info loker di menu <a href="loker.html" class="alert-link">Bursa Kerja</a>.
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p class="mb-0">&copy; 2024 Alumni SI UNIKU</p>
-    </footer>
-
-    <div class="modal fade" id="modalLoker">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title">Pasang Lowongan Kerja</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="form-loker">
-                        <div class="mb-2">
-                            <label class="form-label small fw-bold">Posisi / Jabatan</label>
-                            <input type="text" name="posisi" class="form-control" placeholder="Misal: Frontend Dev" required>
-                        </div>
-                        <div class="mb-2">
-                            <label class="form-label small fw-bold">Nama Perusahaan</label>
-                            <input type="text" name="perusahaan" class="form-control" placeholder="PT..." required>
-                        </div>
-                        <div class="mb-2">
-                            <label class="form-label small fw-bold">Tipe Pekerjaan</label>
-                            <select name="tipe" class="form-select">
-                                <option value="Full-time">Full-time</option>
-                                <option value="Part-time">Part-time</option>
-                                <option value="Freelance">Freelance</option>
-                                <option value="Internship">Internship/Magang</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label small fw-bold">Deskripsi & Syarat</label>
-                            <textarea name="deskripsi" class="form-control" rows="4" placeholder="Jelaskan kualifikasi..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Terbitkan Loker</button>
-                    </form>
-                </div>
-            </div>
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-1 fw-bold">&copy; 2026 Forum Alumni Sistem Informasi</p>
+            <p class="mb-0 small text-white-50">Universitas Kuningan</p>
         </div>
-    </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
